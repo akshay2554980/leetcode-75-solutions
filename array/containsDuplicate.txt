@@ -1,0 +1,23 @@
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+       Set<Integer> set=new HashSet<>();
+        
+        for(int i=0;i<nums.length;++i)
+        {
+            set.add(new Integer(nums[i]));
+        }
+        System.out.println(set);
+        if(set.size()==nums.length)
+        {
+            return false;
+        }
+        else
+            return true;
+    }
+}
+
+tc -> O(n)
+sc -> O(n)
+
+other approach - bruteforce
+                 sorting

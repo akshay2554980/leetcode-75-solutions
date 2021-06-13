@@ -1,0 +1,21 @@
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int sum=nums[0];
+        int n=nums.length;
+        if(n==1)
+        {
+            return nums[0];
+        }
+        int tempsum = nums[0];
+        
+        for(int i=1;i<n;++i)
+        {
+            tempsum = tempsum+nums[i];
+            if(tempsum<nums[i]){
+                tempsum=nums[i];
+            }
+            sum = Math.max(sum,tempsum);
+        }
+        return sum;
+    }
+}
